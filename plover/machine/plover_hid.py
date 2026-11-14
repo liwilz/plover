@@ -16,6 +16,7 @@ from dataclasses import dataclass
 from queue import Empty, Queue
 from typing import Any
 
+# hidapi's Linux wheel ships two modules with the same API:
 # - `hid` uses libusb, which reports usage_page/usage as 0, so the Plover HID
 #   interface (usage page 0xFF50, usage 0x4C56) is never matched.
 # - `hidraw` uses the kernel's hidraw driver, which reports them correctly
